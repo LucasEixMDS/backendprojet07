@@ -2,7 +2,7 @@ const rateLimit = require("express-rate-limit");
 
 module.exports = rateLimit({
   windowMs: 1 * 60 * 1000,
-  max: 6,
+  max: 200,
   handler: function (req, res, next) {
     return res
       .status(429)
